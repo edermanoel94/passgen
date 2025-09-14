@@ -10,7 +10,6 @@ import (
 	"io"
 	"os"
 	"slices"
-	"time"
 )
 
 const (
@@ -103,13 +102,6 @@ func printUsage() {
 }
 
 func generatePassword(length int) (string, error) {
-
-	start := time.Now()
-	defer func() {
-		endTime := time.Since(start)
-
-		fmt.Println(endTime)
-	}()
 
 	randomFile, err := os.OpenFile(randomStream, os.O_RDONLY, os.ModeDevice)
 
