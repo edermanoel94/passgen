@@ -28,15 +28,16 @@ go build -tags=linux -o passgen
 sudo mv passgen /usr/local/bin/
 ```
 
-#### Via go install
-GOOS=linux go install github.com/you/passgen@latest
+#### Via ```go install```
+
+```GOOS=linux go install github.com/you/passgen@```
 
 ## Behavior & Notes
 
-Entropy source: reads from /dev/random. May block if entropy is low.
-Character range: printable ASCII from ! (33) to ~ (126).
-Easy-read mode (-e): skips 0, 1, O, l.
-Output: password is printed to stdout followed by a newline.
+- Entropy source: reads from /dev/random. May block if entropy is low.
+- Character range: printable ASCII from ! (33) to ~ (126).
+- Easy-read mode (-e): skips 0, 1, O, l.
+- Output: password is printed to stdout followed by a newline.
 
 
 ## Exit codes
