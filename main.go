@@ -25,7 +25,7 @@ Flags:
 Examples:
   passgen --length 64
   passgen -l 64
-  passgen -l 64 --ease-read
+  passgen -l 64 --easy-read
 
 `
 )
